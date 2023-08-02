@@ -1,0 +1,60 @@
+~$ count=10
+~$ if[ $count -eq 9 ]
+bash: if[ 10 -eq 9 ]: command not found
+~$ if [ $count -eq 9 ]
+> then
+> echo "Hello World"
+> else echo "Hello OS"
+> fi
+Hello OS
+~$ var="Rahim"
+~$ case $var in
+> "Karim")
+> echo "Karim is good"
+> ;;
+> "Rahim")
+> echo "Rahim is bad"
+> ;;
+> *)
+> echo "Unknown"
+> ;;
+> esac
+Rahim is bad
+~$ la~$ 
+~$ val=10
+~$ if [ $val -gt 18 ] || [ $val -lt 30 ]
+> then
+> echo "Rahim"
+> else
+> echo "Karim"
+> fi
+Rahim
+~$ val=10
+~$ if [[ $val -gt 18 -o $val -it 30 ]]
+bash: syntax error in conditional expression
+bash: syntax error near `-o'
+~$ if [ [ $val -gt 18 -o $val -lt 30 ] ]
+> then
+> echo "Rahim"
+> else
+> echo "Karim"
+> fi
+bash: [: too many arguments
+Karim
+~$ val=10
+~$ if [ $val -gt 18 ] && [ $val -lt 30 ]
+> then
+> echo "Rahim"
+> else
+> echo "Karim"
+> fi
+Karim
+~$ val=10
+~$ if [ $val -gt 18 -a $val -lt 30 ]
+> then
+> echo "Rahim"
+> else
+> echo "Karim"
+> fi
+Karim
+~$ v
